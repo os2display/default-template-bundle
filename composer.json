@@ -1,0 +1,10 @@
+{
+    "name": "os2display/default-template-bundle",
+    "description": "Os2Display default template",
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-4": {
+            "Os2Display\\DefaultTemplateBundle\\": ""
+        }
+    }
+}
