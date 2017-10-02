@@ -1,0 +1,51 @@
+<div class="image-and-text-x2">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 40"
+             class="arrow arrow-up">
+          <polygon fill="#FFF" fill-rule="evenodd"
+                   points="0 40 485.992 0 960 40"/>
+        </svg>
+        <img ng-src="{{ ikSlide.currentImage }}" alt="Nasa" class="img-fluid">
+      </div>
+      <div class="col text">
+        <div class="subject">
+          <h1>Emne fusce vehicula dolor arcu sit amet blandit dolor mollis
+            nec</h1>
+        </div>
+        <div class="line" style="background-color: var(--main-color);"></div>
+        <div class="description">
+          <p>Beskrivelse aptent taciti sociosqu ad litora torquent per conubia
+            nostra, per inceptos himenaeos. Maecenas dapibus, elit in rutrum
+            tristique, risus dui aliquam libero, iaculis et…</p>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col text">
+        <div class="subject">
+          <h1>Emne fusce vehicula dolor arcu sit amet blandit dolor mollis
+            nec</h1>
+        </div>
+        <div class="line" style="background-color: var(--main-color);"></div>
+        <div class="description">
+          <p>Beskrivelse aptent taciti sociosqu ad litora torquent per conubia
+            nostra, per inceptos himenaeos. Maecenas dapibus, elit in rutrum
+            tristique, risus dui aliquam libero, iaculis et…</p>
+        </div>
+      </div>
+      <div class="col image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 40"
+             class="arrow arrow-down">
+          <polygon fill="#FFF" fill-rule="evenodd"
+                   points="0 40 485.992 0 960 40"
+                   transform="matrix(1 0 0 -1 0 40)"/>
+        </svg>
+        <img ng-src="{{ ikSlide.currentImage }}" alt="Nasa" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <img class="only-image--logo" data-ng-show="ikSlide.currentLogo"
+       data-ng-style="{'top':ikSlide.options.logopos.top, 'bottom':ikSlide.options.logopos.bottom, 'left':ikSlide.options.logopos.left, 'right':ikSlide.options.logopos.right, 'width': ikSlide.options.logosize}"
+       data-ng-src="{{ikSlide.currentLogo}}"/>
+</div>
