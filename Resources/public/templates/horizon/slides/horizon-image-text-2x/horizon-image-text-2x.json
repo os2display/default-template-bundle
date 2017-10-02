@@ -1,12 +1,12 @@
 {
-  "id": "image-and-text-2x",
+  "id": "horizon-image-text-2x",
   "type": "slide",
-  "name": "Billede og tekst x2",
-  "icon": "image-and-text-x2.png",
+  "name": "Horizon: Billede/tekst x2",
+  "icon": "icon.jpg",
   "paths": {
-    "live": "image-and-text-x2.html",
-    "edit": "image-and-text-x2-preview.html",
-    "preview": "image-and-text-x2-preview.html",
+    "live": "live.html",
+    "edit": "preview.html",
+    "preview": "preview.html",
     "css": "css/styles.css",
     "js": "bundles/os2displaydefaulttemplate/templates/js/baseSlide.js"
   },
