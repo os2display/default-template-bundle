@@ -20,9 +20,7 @@ angular.module('toolsModule').directive('horizonEditor', [
         scope.backgroundPicker = function backgroundPicker(pickedIndex) {
           index = pickedIndex;
 
-          if (scope.slide.media.indexOf(scope.slide.options.regions[index].mediaId)) {
-            scope.selectedMedia = [scope.slide.media[scope.slide.options.regions[index].mediaId]];
-          }
+          console.log(scope.slide.media);
 
           scope.step = 'background-picker';
         };
@@ -30,14 +28,22 @@ angular.module('toolsModule').directive('horizonEditor', [
         /**
          * Set the step to pick-from-media.
          */
-        scope.pickFromMedia = function pickFromMedia(index) {
+        scope.pickFromMedia = function pickFromMedia() {
+          var region = scope.slide.options.regions[index];
+
+          if (region.mediaIndex !== "" &&
+            region.mediaIndex !== null &&
+            region.mediaIndex !== undefined) {
+            scope.selectedMedia = [scope.slide.media[region.mediaIndex]];
+          }
+
           scope.step = 'pick-from-media';
         };
 
         /**
          * Set the step to pick-from-computer.
          */
-        scope.pickFromComputer = function pickFromComputer(index) {
+        scope.pickFromComputer = function pickFromComputer() {
           scope.step = 'pick-from-computer';
         };
 
@@ -48,9 +54,46 @@ angular.module('toolsModule').directive('horizonEditor', [
         };
 
         /**
-         * Add/remove a media from scope.slide.media.
+         * Remove invalid media references and update region.mediaIndex if
+         * indexes have changed.
+         */
+        var updateMediaReferences = function () {
+          var mediaIndexesUsed = scope.slide.options.regions.reduce(function (sum, value) {
+            if (value.mediaIndex !== "" &&
+              value.mediaIndex !== null &&
+              value.mediaIndex !== undefined) {
+              if (sum.indexOf(value.mediaIndex) === -1) {
+                sum.push(value.mediaIndex);
+              }
+            }
+
+            return sum;
+          }, []);
+
+          var cleanedMedia = [];
+
+          for (var i = 0; i < scope.slide.media.length; i++) {
+            if (mediaIndexesUsed.indexOf(i) === -1) {
+              for (var region in scope.slide.options.regions) {
+                region = scope.slide.options.regions[region];
+
+                if (region.mediaIndex > i) {
+                  region.mediaIndex = region.mediaIndex - 1;
+                }
+              }
+            }
+            else {
+              cleanedMedia.push(scope.slide.media[i]);
+            }
+          }
+
+          scope.slide.media = cleanedMedia;
+        };
+
+        /**
+         * Add a media from scope.slide.media.
          *
-         * Update mediaId references in slide.options.regions.
+         * Update mediaIndex references in slide.options.regions.
          *
          * @param clickedMedia
          */
@@ -74,10 +117,11 @@ angular.module('toolsModule').directive('horizonEditor', [
             mediaIndex = mediaList.length - 1;
           }
 
-          scope.slide.options.regions[index].mediaId = mediaIndex;
-
+          scope.step = null;
           scope.slide.media = mediaList;
-          scope.selectedMedia = scope.slide.options.regions[index].mediaId ? [scope.slide.media[scope.slide.options.regions[index].mediaId]] : [];
+          scope.slide.options.regions[index].mediaIndex = mediaIndex;
+
+          updateMediaReferences();
         };
 
         // Register event listener for select media.
@@ -90,7 +134,7 @@ angular.module('toolsModule').directive('horizonEditor', [
           mediaFactory.getMedia(data.id).then(
             function success(media) {
               scope.slide.media.push(media);
-              scope.slide.options.regions[index].mediaId = scope.slide.media.length - 1;
+              scope.slide.options.regions[index].mediaIndex = scope.slide.media.length - 1;
             },
             function error(reason) {
               busService.$emit('log.error', {

@@ -9,29 +9,30 @@
       </div>
     </div>
     <div class="edit-menu--background-page" data-ng-if="!step">
-      <div class="edit-menu--background-page-inner">
-        <div data-ng-repeat="region in slide.options.regions">
+      <div class="edit-menu--background-page-inner" style="display: flex; flex-direction: column; justify-content: space-around; flex-flow: row wrap;">
+        <div data-ng-repeat="region in slide.options.regions" style="flex: 1 auto; margin: 20px; max-width: 800px">
           <h3 class="edit-menu--background-header">Rediger region {{ $index + 1 }}</h3>
+          <div class="edit-menu--background-content">
+            <div>
+              <h1>{{region.mediaIndex}}</h1>
+              <img style="width: 200px" ng-src="{{ slide.media[region.mediaIndex].urls.default_landscape_small }}" ng-if="region.mediaIndex >= 0">
+            </div>
+            <button class="edit-menu--background-button"
+                    data-ng-click="backgroundPicker($index)">
+              Vælg billede
+            </button>
 
-          <div>
-            <h1>{{region.mediaId}}</h1>
-            <img style="width: 200px" ng-src="{{ slide.media[region.mediaId].urls.default_landscape_small }}" ng-if="region.mediaId && slide.media[region.mediaId]">
+            <label class="edit-menu-background--label">Vælg temafarve</label>
+            <input colorpicker="hex" class="form-slide-background-background-color edit-menu--background-form-element"
+                   type="text" placeholder="e.g. #000" ng-model="region.color"
+                   data-ng-style="{'background-color': region.color}">
+
+            <label class="edit-menu-background--label">Vælg overskrift</label>
+            <input type="text" ng-model="region.title">
+
+            <label class="edit-menu-background--label">Vælg text</label>
+            <textarea ng-model="region.text" rows="5"></textarea>
           </div>
-          <button class="edit-menu--background-button"
-                  data-ng-click="backgroundPicker($index)">
-            Vælg billede
-          </button>
-
-          <label class="edit-menu-background--label">Vælg temafarve</label>
-          <input colorpicker="hex" class="form-slide-background-background-color edit-menu--background-form-element"
-                 type="text" placeholder="e.g. #000" ng-model="region.color"
-                 data-ng-style="{'background-color': region.color}">
-
-          <label class="edit-menu-background--label">Vælg overskrift</label>
-          <input type="text" ng-model="region.title">
-
-          <label class="edit-menu-background--label">Vælg overskrift</label>
-          <textarea ng-model="region.text"></textarea>
         </div>
       </div>
     </div>
