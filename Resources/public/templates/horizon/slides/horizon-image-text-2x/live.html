@@ -1,4 +1,4 @@
-<div class="image-and-text-x2">
+<div class="horizon-image-text-x2">
   <div class="container-fluid">
     <div class="row">
       <div class="col image">
@@ -7,31 +7,25 @@
           <polygon fill="#FFF" fill-rule="evenodd"
                    points="0 40 485.992 0 960 40"/>
         </svg>
-        <img ng-src="{{ ikSlide.currentImage }}" alt="Nasa" class="img-fluid">
+        <img ng-src="{{ ikSlide.media[ikSlide.options.regions[0].mediaIndex].image }}" alt="Nasa" class="img-fluid">
       </div>
       <div class="col text">
         <div class="subject">
-          <h1>Emne fusce vehicula dolor arcu sit amet blandit dolor mollis
-            nec</h1>
+          <h1>{{ ikSlide.options.regions[0].title }}</h1>
         </div>
-        <div class="line" style="background-color: var(--main-color);"></div>
+        <div class="line" ng-style="{'background-color': ikSlide.options.region[0].color}"></div>
         <div class="description">
-          <p>Beskrivelse aptent taciti sociosqu ad litora torquent per conubia
-            nostra, per inceptos himenaeos. Maecenas dapibus, elit in rutrum
-            tristique, risus dui aliquam libero, iaculis et…</p>
+          <p>{{ ikSlide.options.regions[0].text }}</p>
         </div>
       </div>
       <div class="w-100"></div>
       <div class="col text">
         <div class="subject">
-          <h1>Emne fusce vehicula dolor arcu sit amet blandit dolor mollis
-            nec</h1>
+          <h1>{{ ikSlide.options.regions[1].title }}</h1>
         </div>
-        <div class="line" style="background-color: var(--main-color);"></div>
+        <div class="line" ng-style="{'background-color': ikSlide.options.region[1].color}"></div>
         <div class="description">
-          <p>Beskrivelse aptent taciti sociosqu ad litora torquent per conubia
-            nostra, per inceptos himenaeos. Maecenas dapibus, elit in rutrum
-            tristique, risus dui aliquam libero, iaculis et…</p>
+          <p>{{ ikSlide.options.regions[1].text }}</p>
         </div>
       </div>
       <div class="col image">
@@ -41,7 +35,7 @@
                    points="0 40 485.992 0 960 40"
                    transform="matrix(1 0 0 -1 0 40)"/>
         </svg>
-        <img ng-src="{{ ikSlide.currentImage }}" alt="Nasa" class="img-fluid">
+        <img ng-src="{{ ikSlide.media[ikSlide.options.regions[1].mediaIndex] }}" alt="Nasa" class="img-fluid">
       </div>
     </div>
   </div>

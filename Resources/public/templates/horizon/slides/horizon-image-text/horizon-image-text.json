@@ -7,7 +7,7 @@
     "live": "live.html",
     "edit": "preview.html",
     "preview": "preview.html",
-    "css": "css/styles.css",
+    "css": "horizon-image-text.css",
     "js": "bundles/os2displaydefaulttemplate/templates/js/baseSlide.js"
   },
   "orientation": "landscape",
