@@ -19,11 +19,37 @@
     "height": "1080"
   },
   "empty_options": {
+    "regions": [
+      {
+        "headline": "",
+        "text": "",
+        "color": "#357fd1",
+        "mediaId": null
+      },
+      {
+        "headline": "",
+        "text": "",
+        "color": "#357fd1",
+        "mediaId": null
+      }
+    ],
+    "logopos": {
+      "top":"auto",
+      "bottom":"0",
+      "left":"auto",
+      "right":"0"
+    },
+    "logosize": "10%"
   },
   "tools": [
     {
-      "name": "Baggrund",
-      "id": "background-editor"
+      "name": "Info",
+      "template": "bundles/os2displaydefaulttemplate/templates/horizon/slides/horizon-image-text/tools/info.html"
+    },
+
+    {
+      "name": "Indhold",
+      "id": "horizon-editor"
     },
     {
       "name": "Logo",
