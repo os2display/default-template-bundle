@@ -1,12 +1,12 @@
-<div class="horizon-image-text">
+<div class="horizon-image-text" data-ng-style="{'width': theStyle.width, 'height': theStyle.height, 'font-size': theStyle.fontsize}">
   <div class="bg-image blur"
-       style="background-image: url('{{ ikSlide.media[ikSlide.options.regions[0].mediaIndex].image }}')"></div>
+       style="background-image: url('{{ ikSlide.media[ikSlide.options.regions[0].mediaIndex].urls.default_landscape_small }}')"></div>
 
   <div class="container-fluid">
     <div class="row image">
       <div class="col">
         <img
-            ng-src="{{ ikSlide.media[ikSlide.options.regions[0].mediaIndex].image }}"
+            ng-src="{{ ikSlide.media[ikSlide.options.regions[0].mediaIndex].urls.default_landscape_small }}"
             alt="Nasa" class="img-fluid">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 40"
              class="arrow arrow-up">

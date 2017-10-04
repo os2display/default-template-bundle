@@ -6,13 +6,20 @@ $font-open-sans: 'Open Sans', sans-serif;
 $color-transperant-white: rgba(255, 255, 255, 0.9);
 $color-box-shadow-black: rgba(black, 0.16);
 // Space
-$space-vertical: .5rem;
+$space-vertical: .5em;
 
 // Shadow
 $box-shadow: 0 0 16px $color-box-shadow-black;
 
+.create-slide--editing-template {
+  overflow: hidden;
+}
 
 .horizon-image-text {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+
   h1, h2, p {
     padding: 0;
     margin: 0;
@@ -26,15 +33,15 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px; }
+    margin-right: -0.7%;
+    margin-left: -0.7%; }
 
   .col {
     position: relative;
     width: 100%;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px; }
+    padding-right: 0.7%;
+    padding-left:  0.7%; }
 
   .col {
     flex-basis: 0;
@@ -49,11 +56,9 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%; }
-
-
+    padding-right: 0.7%;
+    padding-left: 0.7%;
+  }
 
   font-family: $font-open-sans;
   padding: 0;
@@ -64,11 +69,11 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     top: -5%;
     left: -5%;
     width: 110%;
-    height: 110vh;
+    height: 110%;
     background-position: top center;
     background-size: cover;
     filter: blur(5px);
-    z-index: 1;
+    z-index: 0;
   }
 
   .img-fluid {
@@ -80,9 +85,11 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
 
   .container-fluid {
-    z-index: 2;
+    z-index: 1;
     position: relative;
-    padding: 5vmin 20vmin;
+    padding: 2.5% 11%;
+    height: 100%;
+
     .row {
       position: relative;
       .col {
@@ -95,18 +102,19 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
           width: 100%;
           position: absolute;
           &-up {
-            bottom: 7.9vmin;
+            bottom: 8.9%;
           }
         }
       }
       &.text{
-        transform: translateY(-8vmin);
-        z-index: 2;
+        position: relative;
+        bottom: 7.8%;
+        z-index: 1;
         background: #fff;
 
         .subject {
-          padding-top: 3vmin;
-          margin: 0 6vmin;
+          padding-top: 1.2%;
+          margin: 0 4.2%;
 
           h1 {
             height: auto;
@@ -118,48 +126,48 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
           // }
         }
         .line {
-          width: 100px;
-          height: .5vmin;
+          width: 7%;
+          height: .5%;
           background-color: #ccc;
           display: block;
-          margin: 3vmin 6vmin 0 6vmin;
+          margin: 1% 0 0 4.2%;
         }
         .description {
-          padding-top: 3vmin;
-          padding-bottom: 3vmin;
-          margin: 0 6vmin;
+          padding-top: 1.5%;
+          padding-bottom: 1.5%;
+          margin: 1% 0 0 4.2%;
         }
       }
     }
   }
   .logo {
-    height: 6vh;
+    height: 6%;
     width: auto;
   }
 
   .container-background {
     background-color: $color-transperant-white;
     box-shadow: 0 0 16px $color-box-shadow-black;
-    z-index: 2;
+    z-index: 1;
     position: relative;
-    padding: 1rem;
+    padding: 1em;
   }
   .lead {
-    font-size: 1rem;
+    font-size: 1em;
     margin-bottom: $space-vertical;
   }
   .logo {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    z-index: 3;
+    position: absolute;
+    bottom: 1.5em;
+    right: 1.5em;
+    z-index: 2;
   }
   .subject {
     h1 {
-      font-size: 2rem;
+      font-size: 2em;
       font-weight: bold;
-      line-height: 2rem;
-      height: 6rem;
+      line-height: 2em;
+      height: 6em;
       overflow: hidden;
       text-overflow: ellipsis;
       -webkit-line-clamp: 1;
@@ -167,14 +175,14 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
   .time, .location, .description {
     p {
-      font-size: 1rem;
+      font-size: 1em;
       margin-top: $space-vertical;
     }
   }
   .description {
     p {
-      line-height: 1.2rem;
-      height: 3.6rem;
+      line-height: 1.2em;
+      height: 3.6em;
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
