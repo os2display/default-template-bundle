@@ -1,13 +1,175 @@
-@import "compass/css3";
-@import "../../../../../sass/_shared-base.scss";
+// Open sans font
+$FontPathOpenSans: "fonts/open-sans";
+@import "../../../../../../node_modules/npm-font-open-sans/open-sans.scss";
+
+$font-open-sans: 'Open Sans', sans-serif;
+$color-transperant-white: rgba(255, 255, 255, 0.9);
+$color-box-shadow-black: rgba(black, 0.16);
+$space-vertical: .5rem;
+$box-shadow: 0 0 16px $color-box-shadow-black;
 
 .horizon-image-text-2x {
-  background-size: cover;
-  background-position: center;
+  h1, h2, p {
+    padding: 0;
+    margin: 0;
+  }
 
-  &--logo {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+
+  .col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px; }
+
+  .col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%; }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto; }
+
+  .container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%; }
+
+
+  .w-100 {
+    width: 100% !important; }
+
+
+  font-family: $font-open-sans;
+  padding: 0;
+  color: black;
+
+  .bg-image {
     position: absolute;
-    width: 10%;
-    padding: 2%;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110vh;
+    background-position: top center;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: 1;
+  }
+
+  .blur {
+    filter: blur(5px);
+  }
+
+  .container-fluid {
+    .col {
+      padding-left: 0;
+      padding-right: 0;
+      &.image {
+        z-index: 1;
+        position: relative;
+        .arrow {
+          position: absolute;
+          &-up {
+            bottom: 0;
+          }
+          &-down {
+            top: 0;
+          }
+        }
+      }
+      &.text {
+        z-index: 2;
+        background: #fff;
+        .subject {
+          padding-top: 6vmin;
+          margin: 0 6vmin;
+          // h1 {
+          //     font-size: 4vmin;
+          // }
+        }
+        .description {
+          // p {
+          //     font-size: 2.2vmin;
+          // }
+        }
+        .line {
+          width: 100px;
+          height: .5vmin;
+          background-color: #ccc;
+          display: block;
+          margin: 3vmin 6vmin 0 6vmin;
+        }
+        .description {
+          padding-top: 3vmin;
+          padding-bottom: 1vmin;
+          margin: 0 6vmin;
+        }
+      }
+    }
+  }
+  .logo {
+    height: 6vh;
+    width: auto;
+  }
+
+  .container-background {
+    background-color: $color-transperant-white;
+    box-shadow: 0 0 16px $color-box-shadow-black;
+    z-index: 2;
+    position: relative;
+    padding: 1rem;
+  }
+  .lead {
+    font-size: 1rem;
+    margin-bottom: $space-vertical;
+  }
+
+  .logo {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 3;
+  }
+
+  .subject {
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 2rem;
+      height: 6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+    }
+  }
+  .time, .location, .description {
+    p {
+      font-size: 1rem;
+      margin-top: $space-vertical;
+    }
+  }
+  .description {
+    p {
+      line-height: 1.2rem;
+      height: 3.6rem;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+    }
   }
 }

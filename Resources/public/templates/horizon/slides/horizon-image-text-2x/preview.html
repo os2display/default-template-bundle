@@ -7,25 +7,25 @@
           <polygon fill="#FFF" fill-rule="evenodd"
                    points="0 40 485.992 0 960 40"/>
         </svg>
-        <img ng-src="{{ ikSlide.media[ikSlide.options.regions[0].mediaIndex].image }}" alt="Nasa" class="img-fluid">
+        <img ng-src="{{ slide.media[slide.options.regions[0].mediaIndex].image }}" alt="Nasa" class="img-fluid">
       </div>
       <div class="col text">
         <div class="subject">
-          <h1>{{ ikSlide.options.regions[0].title }}</h1>
+          <h1>{{ slide.options.regions[0].title }}</h1>
         </div>
-        <div class="line" ng-style="{'background-color': ikSlide.options.regions[0].color}"></div>
+        <div class="line" ng-style="{'background-color': slide.options.regions[0].color}"></div>
         <div class="description">
-          <p>{{ ikSlide.options.regions[0].text }}</p>
+          <p>{{ slide.options.regions[0].text }}</p>
         </div>
       </div>
       <div class="w-100"></div>
       <div class="col text">
         <div class="subject">
-          <h1>{{ ikSlide.options.regions[1].title }}</h1>
+          <h1>{{ slide.options.regions[1].title }}</h1>
         </div>
-        <div class="line" ng-style="{'background-color': ikSlide.options.regions[1].color}"></div>
+        <div class="line" ng-style="{'background-color': slide.options.regions[1].color}"></div>
         <div class="description">
-          <p>{{ ikSlide.options.regions[1].text }}</p>
+          <p>{{ slide.options.regions[1].text }}</p>
         </div>
       </div>
       <div class="col image">
@@ -35,11 +35,11 @@
                    points="0 40 485.992 0 960 40"
                    transform="matrix(1 0 0 -1 0 40)"/>
         </svg>
-        <img ng-src="{{ ikSlide.media[ikSlide.options.regions[1].mediaIndex].image }}" alt="Nasa" class="img-fluid">
+        <img ng-src="{{ slide.media[slide.options.regions[1].mediaIndex].image }}" alt="Nasa" class="img-fluid">
       </div>
     </div>
   </div>
-  <img class="only-image--logo" data-ng-show="ikSlide.currentLogo"
-       data-ng-style="{'top':ikSlide.options.logopos.top, 'bottom':ikSlide.options.logopos.bottom, 'left':ikSlide.options.logopos.left, 'right':ikSlide.options.logopos.right, 'width': ikSlide.options.logosize}"
-       data-ng-src="{{ikSlide.currentLogo}}"/>
+  <img class="only-image--logo" data-ng-show="slide.currentLogo"
+       data-ng-style="{'top':slide.options.logopos.top, 'bottom':slide.options.logopos.bottom, 'left':slide.options.logopos.left, 'right':slide.options.logopos.right, 'width': slide.options.logosize}"
+       data-ng-src="{{slide.currentLogo}}"/>
 </div>
