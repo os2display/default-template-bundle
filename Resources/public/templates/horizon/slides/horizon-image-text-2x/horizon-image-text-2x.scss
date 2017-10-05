@@ -73,6 +73,10 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
 
   /* Bootstrap end */
 
+  .row {
+    height: 50%;
+  }
+
   .col {
     max-width: 50%;
     margin: 0;
