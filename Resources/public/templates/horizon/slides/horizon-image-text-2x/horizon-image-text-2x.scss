@@ -164,9 +164,11 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
       font-weight: bold;
       line-height: 1em;
       height: 3em;
+
       overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
   }
 
@@ -182,9 +184,11 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
       line-height: 1.4em;
       max-height: 15em;
       width: 100%;
+
       overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical;
     }
   }
 }
