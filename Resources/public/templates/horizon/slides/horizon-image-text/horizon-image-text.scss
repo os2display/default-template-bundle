@@ -150,10 +150,6 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
       }
     }
   }
-  .logo {
-    height: 6%;
-    width: auto;
-  }
 
   .container-background {
     background-color: $color-transperant-white;
@@ -162,16 +158,21 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     position: relative;
     padding: 1em;
   }
+
   .lead {
     font-size: 1em;
     margin-bottom: $space-vertical;
   }
+
   .logo {
+    height: auto;
+    max-width: 7.5%;
     position: absolute;
-    bottom: 1.5em;
-    right: 1.5em;
+    bottom: 1em;
+    right: 1em;
     z-index: 1;
   }
+
   .subject {
     h1 {
       font-size: 2em;
@@ -183,12 +184,14 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
       -webkit-line-clamp: 1;
     }
   }
+
   .time, .location, .description {
     p {
       font-size: 1em;
       margin-top: $space-vertical;
     }
   }
+
   .description {
     p {
       line-height: 1.2em;
