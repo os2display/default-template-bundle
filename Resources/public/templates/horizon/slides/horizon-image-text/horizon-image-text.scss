@@ -145,7 +145,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
         .description {
           padding-top: 1.5%;
           padding-bottom: 1.5%;
-          margin: 1% 4.2% 0 4.2%;
+          margin: 0 4.2% 0 4.2%;
         }
       }
     }
@@ -179,6 +179,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
       font-weight: bold;
       line-height: 2em;
       height: 6em;
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       -webkit-line-clamp: 1;
@@ -194,10 +195,9 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
 
   .description {
     p {
-      line-height: 1.2em;
-      height: 1em;
+      line-height: 1.4em;
+      max-height: 2.8em;
       width: 100%;
-      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       -webkit-line-clamp: 3;
