@@ -1,15 +1,23 @@
-// Open sans font
 $FontPathOpenSans: "fonts/open-sans";
 @import "../../../../../../node_modules/npm-font-open-sans/open-sans.scss";
-
 $font-open-sans: 'Open Sans', sans-serif;
+
 $color-transperant-white: rgba(255, 255, 255, 0.9);
 $color-box-shadow-black: rgba(black, 0.16);
-$space-vertical: .5rem;
+$color-light-grey: rgb(220, 220, 220);
+$color-grey: rgb(125, 125, 125);
+$space-vertical: .5em;
 $box-shadow: 0 0 16px $color-box-shadow-black;
 
 .horizon-image-text-2x {
+  height: 100%;
+  width: 100%;
   text-align: left;
+  font-family: $font-open-sans;
+  padding: 0;
+  color: black;
+
+  /* Bootstrap - modified to use % instead of px */
 
   h1, h2, p {
     padding: 0;
@@ -19,64 +27,65 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   *,
   *::before,
   *::after {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+  }
 
   .row {
+    width: 100%;
+    flex-direction: row;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px; }
+    margin-right: -0.7%;
+    margin-left: -0.7%;
+  }
 
   .col {
     position: relative;
-    width: 100%;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px; }
+    padding-right: 0.7%;
+    padding-left: 0.7%;
+  }
 
   .col {
     flex-basis: 0;
     flex-grow: 1;
-    max-width: 100%; }
+    max-width: 100%;
+  }
 
   .img-fluid {
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
 
   .container-fluid {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%; }
-
-
-  .w-100 {
-    width: 100% !important; }
-
-
-  font-family: $font-open-sans;
-  padding: 0;
-  color: black;
-
-  .bg-image {
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    width: 110%;
-    height: 110vh;
-    background-position: top center;
-    background-size: cover;
-    filter: blur(5px);
-    z-index: 1;
+    padding-right: 0.7%;
+    padding-left: 0.7%;
   }
 
-  .blur {
-    filter: blur(5px);
+  .w-100 {
+    width: 100% !important;
+  }
+
+  /* Bootstrap end */
+
+  .col {
+    max-width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .img-fluid {
+    height: 100%;
+    width: 100%;
   }
 
   .container-fluid {
+    height: 100%;
     .col {
       padding-left: 0;
       padding-right: 0;
@@ -96,35 +105,28 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
       &.text {
         z-index: 2;
         background: #fff;
+
         .subject {
-          padding-top: 6vmin;
-          margin: 0 6vmin;
-          // h1 {
-          //     font-size: 4vmin;
-          // }
-        }
-        .description {
-          // p {
-          //     font-size: 2.2vmin;
-          // }
+          padding-top: 1.2%;
+          margin: 0 4.2%;
         }
         .line {
-          width: 100px;
-          height: .5vmin;
+          width: 7%;
+          height: 2%;
           background-color: #ccc;
           display: block;
-          margin: 3vmin 6vmin 0 6vmin;
+          margin: 1.5% 0 0 4.2%;
         }
         .description {
-          padding-top: 3vmin;
-          padding-bottom: 1vmin;
-          margin: 0 6vmin;
+          padding-top: 1.5%;
+          padding-bottom: 1.5%;
+          margin: 1% 4.2% 0 4.2%;
         }
       }
     }
   }
   .logo {
-    height: 6vh;
+    height: 6%;
     width: auto;
   }
 

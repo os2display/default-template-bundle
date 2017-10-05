@@ -17,12 +17,12 @@
     <div class="row text">
       <div class="col">
         <div class="subject">
-          <h1>{{ ikSlide.options.regions[0].title }}</h1>
+          <h1>{{ ikSlide.options.regions[0].title ? ikSlide.options.regions[0].title : "&nbsp;" }}</h1>
         </div>
         <div class="line"
              ng-style="{'background-color': ikSlide.options.regions[0].color}"></div>
         <div class="description">
-          <p>{{ ikSlide.options.regions[0].text }}</p>
+          <p>{{ ikSlide.options.regions[0].text ? ikSlide.options.regions[0].text : "&nbsp;" }}</p>
         </div>
       </div>
     </div>
