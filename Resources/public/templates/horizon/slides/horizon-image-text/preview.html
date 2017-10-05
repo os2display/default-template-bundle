@@ -5,9 +5,9 @@
   <div class="container-fluid">
     <div class="row image">
       <div class="col">
-        <img
-            ng-src="{{ ikSlide.media[ikSlide.options.regions[0].mediaIndex].urls.default_landscape_small }}"
-            alt="Nasa" class="img-fluid">
+        <div class="front-image"
+             style="background-image: url('{{ ikSlide.media[ikSlide.options.regions[0].mediaIndex].urls.default_landscape_small }}')">
+        </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 40"
              class="arrow arrow-up">
           <polygon fill="#FFF" fill-rule="evenodd" points="0 40 485.992 0 960 40"/>
@@ -28,5 +28,5 @@
     </div>
   </div>
 
-  <img data-ng-src="{{ ikSlide.currentLogo }}" class="logo" alt="Logo">
+  <img data-ng-src="{{ ikSlide.currentLogo }}" class="logo" alt="Logo" ng-if="ikSlide.currentLogo">
 </div>

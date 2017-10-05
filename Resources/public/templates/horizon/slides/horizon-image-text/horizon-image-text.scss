@@ -80,6 +80,14 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     width: 100%;
   }
 
+  .front-image {
+    margin-top: 2%;
+    height: 78%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .blur {
     filter: blur(5px);
   }
@@ -87,10 +95,11 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   .container-fluid {
     z-index: 1;
     position: relative;
-    padding: 2.5% 11%;
+    padding: 0 11%;
     height: 100%;
 
     .row {
+      height: 100%;
       position: relative;
       .col {
         padding-left: 0;
@@ -102,15 +111,16 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
           width: 100%;
           position: absolute;
           &-up {
-            bottom: 8.9%;
+            bottom: 22%;
           }
         }
       }
       &.text{
         position: relative;
-        bottom: 7.8%;
+        bottom: 22%;
         z-index: 1;
         background: #fff;
+        height: 20%;
 
         .subject {
           padding-top: 1.2%;
@@ -127,10 +137,10 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
         }
         .line {
           width: 7%;
-          height: .5%;
+          height: 2%;
           background-color: #ccc;
           display: block;
-          margin: 1% 0 0 4.2%;
+          margin: 1.5% 0 0 4.2%;
         }
         .description {
           padding-top: 1.5%;
@@ -160,7 +170,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     position: absolute;
     bottom: 1.5em;
     right: 1.5em;
-    z-index: 2;
+    z-index: 1;
   }
   .subject {
     h1 {
