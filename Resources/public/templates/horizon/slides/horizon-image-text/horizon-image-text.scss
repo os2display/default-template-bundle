@@ -130,11 +130,6 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
             height: auto;
           }
         }
-        .description {
-          // p {
-          //     font-size: 2.2vmin;
-          // }
-        }
         .line {
           width: 7%;
           height: 2%;
@@ -145,7 +140,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
         .description {
           padding-top: 1.5%;
           padding-bottom: 1.5%;
-          margin: 1% 0 0 4.2%;
+          margin: 1% 4.2% 0 4.2%;
         }
       }
     }
@@ -192,8 +187,9 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   .description {
     p {
       line-height: 1.2em;
-      height: 3.6em;
+      height: 1em;
       width: 100%;
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       -webkit-line-clamp: 3;
