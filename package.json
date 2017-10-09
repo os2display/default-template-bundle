@@ -1,6 +1,6 @@
 {
-  "name": "os2display default template bundle",
-  "description": "",
+  "name": "default-template-bundle",
+  "description": "Default templates",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

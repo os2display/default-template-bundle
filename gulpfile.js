@@ -53,6 +53,11 @@ var templates = {
       'horizon-image-text',
       'horizon-image-text-2x'
     ]
+  },
+  'calendar': {
+    'slides': [
+      'calendar-list'
+    ]
   }
 };
 
