@@ -50,6 +50,12 @@ if (!window.slideFunctions['calendar-all']) {
       if (slide.external_data) {
         var now = new Date();
         now = now.getTime();
+        var start = new Date();
+        start.setHours(0,0,0);
+        start = start.getTime();
+        var end = new Date();
+        end.setHours(23,59,59);
+        end = end.getTime();
 
         var arr = [];
         var currentEvent = null;
@@ -59,11 +65,23 @@ if (!window.slideFunctions['calendar-all']) {
           if (slide.external_data[i].end_time * 1000 > now) {
             var booking = slide.external_data[i];
 
+            if (booking.start_time * 1000 < start) {
+              booking.start_time = parseInt(start / 1000);
+            }
+
+            if (booking.end_time * 1000 > end) {
+              booking.multiDay = true;
+            }
+
             var startDate = new Date(booking.start_time * 1000);
             var endDate = new Date(booking.end_time * 1000);
 
             booking.startDate = startDate;
             booking.endDate = endDate;
+
+            if (startDate.getHours() === endDate.getHours()) {
+              booking.fullDay = true;
+            }
 
             if (!currentEvent) {
               currentEvent = booking;

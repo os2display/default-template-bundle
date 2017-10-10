@@ -37,7 +37,11 @@
               <h1>{{ ikSlide.currentEvent.event_name }}</h1>
             </div>
             <div class="time">
-              <p>{{ ikSlide.currentEvent.time }}</p>
+              <p ng-if="ikSlide.currentEvent.fullDay">Hele dagen</p>
+              <p ng-if="!ikSlide.currentEvent.fullDay">{{ ikSlide.currentEvent.start_time * 1000 | date:'HH:mm' }} - {{ ikSlide.currentEvent.end_time * 1000 | date:'HH:mm' }}</p>
+            </div>
+            <div ng-if="ikSlide.currentEvent.multiDay">
+              <p>Indtil {{ ikSlide.currentEvent.end_time * 1000 | date:'d. MMMM'  }}</p>
             </div>
             <div class="location">
               <p>{{ ikSlide.currentEvent.location }}</p>
@@ -51,7 +55,7 @@
           </div>
         </div>
         <p class="lead">Kommende</p>
-        <div data-ng-repeat="event in ikSlide.futureEvents | limitTo: 10" class="row event event-future">
+        <div data-ng-repeat="event in ikSlide.futureEvents | limitTo: 6" class="row event event-future">
           <div class="col-2 date">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 87">
               <defs>
@@ -83,7 +87,9 @@
               <h2>{{ event.event_name }}</h2>
             </div>
             <div class="time">
-              <p>{{ event.start_time * 1000 | date:'HH:mm' }} - {{ event.end_time * 1000 | date:'HH:mm' }}</p>
+              <p ng-if="event.fullDay">Hele dagen</p>
+              <p ng-if="!event.fullDay">{{ event.start_time * 1000 | date:'HH:mm' }} - {{ event.end_time * 1000 | date:'HH:mm' }}</p>
+              <p ng-if="event.multiDay">Indtil {{ event.end_time * 1000 | date:'d. MMMM' }}</p>
             </div>
             <div class="location">
               <p>{{ event.location }}</p>
