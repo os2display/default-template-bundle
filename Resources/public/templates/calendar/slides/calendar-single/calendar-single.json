@@ -1,0 +1,46 @@
+{
+  "id": "calendar-single",
+  "type": "slide",
+  "name": "Kalender: Enkelt begivenhed",
+  "icon": "icon.jpg",
+  "paths": {
+    "live": "live.html",
+    "edit": "preview.html",
+    "preview": "preview.html",
+    "css": "calendar-single.css",
+    "js": "bundles/os2displaydefaulttemplate/templates/js/calendarSlide.js"
+  },
+  "orientation": "landscape",
+  "slide_type": "calendar",
+  "media_type": "image",
+  "script_id": "calendar-all",
+  "ideal_dimensions": {
+    "width": "1080",
+    "height": "1920"
+  },
+  "empty_options": {
+    "color": "#007AAF",
+    "fontsize": "16",
+    "logopos": {
+      "top":"0",
+      "bottom":"auto",
+      "left":"0",
+      "right":"auto"
+    },
+    "logosize": "10%"
+  },
+  "tools": [
+    {
+      "name": "Info",
+      "template": "bundles/os2displaydefaulttemplate/templates/calendar/slides/calendar-single/tools/info.html"
+    },
+    {
+      "name": "Temagrafik",
+      "id": "background-editor"
+    },
+    {
+      "name": "Logo",
+      "id": "logo-editor"
+    }
+  ]
+}
