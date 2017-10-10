@@ -57,7 +57,8 @@ var templates = {
   'calendar': {
     'slides': [
       'calendar-list',
-      'calendar-single'
+      'calendar-single',
+      'calendar-focus'
     ]
   }
 };
