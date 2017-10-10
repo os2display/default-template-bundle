@@ -3,8 +3,8 @@
  */
 
 // Register the function, if it does not already exist.
-if (!window.slideFunctions['calendar_all']) {
-  window.slideFunctions['calendar'] = {
+if (!window.slideFunctions['calendar-all']) {
+  window.slideFunctions['calendar-all'] = {
     /**
      * Setup the slide for rendering.
      * @param scope
@@ -52,16 +52,30 @@ if (!window.slideFunctions['calendar_all']) {
         now = now.getTime();
 
         var arr = [];
+        var currentEvent = null;
 
         // Filter out finished events.
         for (var i = 0; i < slide.external_data.length; i++) {
           if (slide.external_data[i].end_time * 1000 > now) {
             var booking = slide.external_data[i];
-            arr.push(booking);
+
+            var startDate = new Date(booking.start_time * 1000);
+            var endDate = new Date(booking.end_time * 1000);
+
+            booking.startDate = startDate;
+            booking.endDate = endDate;
+
+            if (!currentEvent) {
+              currentEvent = booking;
+            }
+            else {
+              arr.push(booking);
+            }
           }
         }
 
-        slide.selected_data = arr;
+        slide.currentEvent = currentEvent;
+        slide.futureEvents = arr;
       }
 
       // Wait fadeTime before start to account for fade in.
