@@ -147,10 +147,12 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
 
   .logo {
-    position: fixed;
-    bottom: 1.5em;
-    right: 1.5em;
-    z-index: 3;
+    height: auto;
+    max-height: 6%;
+    position: absolute;
+    bottom: 2.5%;
+    right: 1%;
+    z-index: 1;
   }
 
   .subject {
