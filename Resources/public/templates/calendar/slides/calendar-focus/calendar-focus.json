@@ -19,7 +19,7 @@
     "height": "1080"
   },
   "empty_options": {
-    "color": "#007AAF",
+    "bgcolor": "#007AAF",
     "fontsize": "16",
     "logopos": {
       "top":"0",

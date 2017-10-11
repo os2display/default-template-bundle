@@ -278,7 +278,12 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
 
   .arrow {
-    margin-top: -3.3em;
+    position: absolute;
+    top: 69.75%;
+
+    &.preview {
+      top: 70%;
+    }
   }
 
   .row-top {
