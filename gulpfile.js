@@ -51,14 +51,14 @@ var templates = {
   'horizon': {
     'slides': [
       'horizon-image-text',
-      'horizon-image-text-2x'
+      'horizon-image-text-2x',
+      'horizon-calendar'
     ]
   },
   'calendar': {
     'slides': [
       'calendar-list',
-      'calendar-single',
-      'calendar-focus'
+      'calendar-single'
     ]
   }
 };

@@ -3,7 +3,7 @@
        style="background-image: url('{{ ikSlide.currentEvent.image ? ikSlide.currentEvent.image : ikSlide.currentImage }}');"></div>
   <div class="container-fluid image" ng-if="ikSlide.currentEvent.image || ikSlide.currentImage">
     <img
-        src="{{ ikSlide.currentEvent.image ? ikSlide.currentEvent.image : ikSlide.currentImage }}"
+        ng-src="{{ ikSlide.currentEvent.image ? ikSlide.currentEvent.image : ikSlide.currentImage }}"
         class="img-fluid">
   </div>
   <div class="container-fluid container-background">
