@@ -58,7 +58,6 @@ if (!window.slideFunctions['calendar-all']) {
         end = end.getTime();
 
         var arr = [];
-        var currentEvent = null;
 
         // Filter out finished events.
         for (var i = 0; i < slide.external_data.length; i++) {
@@ -97,16 +96,10 @@ if (!window.slideFunctions['calendar-all']) {
               booking.fullDay = true;
             }
 
-            if (!currentEvent) {
-              currentEvent = booking;
-            }
-            else {
-              arr.push(booking);
-            }
+            arr.push(booking);
           }
         }
 
-        slide.currentEvent = currentEvent;
         slide.futureEvents = arr;
       }
 

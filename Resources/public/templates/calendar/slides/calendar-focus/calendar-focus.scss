@@ -11,12 +11,12 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
 
 .calendar-focus {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.4;
   height: 100%;
   width: 100%;
   text-align: left;
   font-family: $font-open-sans;
-  color: black;
+  color: #333;
   padding: 0;
   margin: 0;
 
@@ -105,7 +105,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
 
   .image {
-    height: 75.35%;
+    height: 72%;
     width: 100%;
     background-position: top center;
     background-size: cover;
@@ -137,12 +137,12 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   .event-future .subject h2 {
     font-size: 1em;
     font-weight: bold;
-    line-height: 1.1em;
-    height: 1.1em;
+    line-height: 1.5;
+    height: 4.5em;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 3;
   }
   .event-future .time, .event-future .location {
     width: 50%;
@@ -159,7 +159,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
 
   .lead {
-    font-size: 1em;
+    font-size: 1.2em;
     margin-bottom: 0.5em;
   }
 
@@ -174,14 +174,13 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     margin-left: 14em;
 
     h1 {
-      font-size: 2em;
+      font-size: 2.3em;
       font-weight: bold;
-      line-height: 1.2em;
+      line-height: 2.3em;
       height: 3em;
-
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
     }
   }
@@ -193,19 +192,22 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     }
   }
 
+  .location {
+    text-align: right;
+  }
+
   .lead p {
     font-weight: bold;
   }
 
   .description {
     p {
-      line-height: 1.2em;
-      max-height: 15em;
+      line-height: 1.45em;
+      max-height: 2.9em;
       width: 100%;
-
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
     }
   }
@@ -236,29 +238,31 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
         box-shadow: $box-shadow;
         z-index: 2;
         .subject {
-          margin: 5em 6em 0 4em;
+          margin: 2% 5.2% 0 5.2%;
           h1 {
             height: auto;
           }
         }
         .line {
-          width: 6.4em;
-          height: .3em;
+          width: 6em;
+          height: .9%;
           background-color: #ccc;
           display: block;
-          margin: 2.3% 0 0 4em;
+          margin: 0 0 0 5.2%;
         }
         .description {
-          margin: 0 2.9em 2.5em 4em;
+          font-size: 1.9em;
+          margin: 2% 5.2% 0 5.2%;
           height: 2.5em;
+          font-weight: lighter;
         }
       }
       .cal-list {
         background-color: #FFF;
-        padding: 1.5%;
+        padding: 1.8%;
         z-index: 1;
         .subject {
-          margin: 1em 0 0 1em;
+          margin: 0 0 0 1.5em;
         }
       }
     }
@@ -266,31 +270,40 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
 
   .logo {
     height: auto;
-    max-height: 6%;
+    max-width: 12%;
     position: absolute;
-    bottom: 2.5%;
-    right: 1%;
-    z-index: 1;
+    bottom: .5%;
+    right: .5%;
+    z-index: 2;
   }
 
   .date {
-    height: 6.2em;
+    height: 6em;
   }
 
   .arrow {
     position: absolute;
-    top: 69.75%;
-
-    &.preview {
-      top: 70%;
-    }
+    width: 72%;
+    top: 69.5%;
+    left: 0;
   }
 
   .row-top {
-    height: 88.5%;
+    height: 100%;
   }
 
-  .row-bottom {
-    height: 11.5%;
+  .col-custom-big {
+    flex: 0 0 72%;
+    max-width: 72%;
+  }
+
+  .col-custom-small {
+    flex: 0 0 28%;
+    max-width: 28%;
+    font-size: 1.6em;
+  }
+
+  .calendar-icon {
+    width: 115%;
   }
 }
