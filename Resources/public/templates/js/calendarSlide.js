@@ -79,6 +79,20 @@ if (!window.slideFunctions['calendar-all']) {
             booking.startDate = startDate;
             booking.endDate = endDate;
 
+            var expression = /https:\/\/(www\.)?[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+            var regex = new RegExp(expression);
+            var urlMatches = booking.body.match(regex);
+
+            if (urlMatches) {
+              for (var match in urlMatches) {
+                booking.body = booking.body.replace(urlMatches[match], "");
+
+                if (!booking.image && (/\.(gif|jpg|jpeg|png)$/i).test(urlMatches[match])) {
+                  booking.image = urlMatches[match];
+                }
+              }
+            }
+
             if (startDate.getHours() === endDate.getHours()) {
               booking.fullDay = true;
             }

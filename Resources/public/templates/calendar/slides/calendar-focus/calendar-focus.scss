@@ -104,6 +104,14 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     z-index: 0;
   }
 
+  .image {
+    height: 75.35%;
+    width: 100%;
+    background-position: top center;
+    background-size: cover;
+    z-index: 0;
+  }
+
   .img-fluid {
     max-width: 100%;
     height: auto;
@@ -168,7 +176,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     h1 {
       font-size: 2em;
       font-weight: bold;
-      line-height: 1em;
+      line-height: 1.2em;
       height: 3em;
 
       overflow: hidden;
@@ -214,6 +222,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
 
   .container-fluid {
+    height: 100%;
     margin: 0;
     padding: 0;
     .row {
@@ -237,7 +246,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
           height: .3em;
           background-color: #ccc;
           display: block;
-          margin: 2.5% 0 0 4em;
+          margin: 2.3% 0 0 4em;
         }
         .description {
           margin: 0 2.9em 2.5em 4em;
@@ -269,6 +278,14 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
 
   .arrow {
-    margin-top: -3.35em;
+    margin-top: -3.3em;
+  }
+
+  .row-top {
+    height: 88.5%;
+  }
+
+  .row-bottom {
+    height: 11.5%;
   }
 }

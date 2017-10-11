@@ -1,8 +1,9 @@
 <div class="calendar-focus preview" data-ng-style="{'width': theStyle.width, 'height': theStyle.height, 'font-size': theStyle.fontsize, 'background-color': ikSlide.options.bgcolor}">
   <div class="container-fluid">
-    <div class="row">
+    <div class="row row-top">
       <div class="col-8 image-text">
-        <img ng-src="{{ ikSlide.currentImage }}" class="img-fluid">
+        <div class="image"
+             style="background-image: url('{{ ikSlide.currentImage }}');"></div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 40"
              class="arrow arrow-up">
           <polygon fill="#FFF" fill-rule="evenodd"
@@ -192,6 +193,7 @@
       </div>
     </div>
   </div>
-
-  <img data-ng-src="{{ ikSlide.currentLogo }}" class="logo" alt="Logo" ng-if="ikSlide.currentLogo">
+  <div class="row row-bottom">
+    <img data-ng-src="{{ ikSlide.currentLogo }}" class="logo" alt="Logo" ng-if="ikSlide.currentLogo">
+  </div>
 </div>
