@@ -1,13 +1,14 @@
 {
-  "id": "calendar-single",
+  "id": "horizon-calendar-list",
+  "theme": "horizon",
   "type": "slide",
-  "name": "Kalender: Enkelt begivenhed",
+  "name": "Horizon: Kalender - Liste",
   "icon": "icon.jpg",
   "paths": {
     "live": "live.html",
     "edit": "preview.html",
     "preview": "preview.html",
-    "css": "calendar-single.css",
+    "css": "horizon-calendar-list.css",
     "js": "bundles/os2displaydefaulttemplate/templates/js/calendarFocusSlide.js"
   },
   "orientation": "landscape",
@@ -32,7 +33,7 @@
   "tools": [
     {
       "name": "Info",
-      "template": "bundles/os2displaydefaulttemplate/templates/calendar/slides/calendar-single/tools/info.html"
+      "template": "bundles/os2displaydefaulttemplate/templates/horizon/slides/horizon-calendar-list/tools/info.html"
     },
     {
       "name": "Temagrafik",

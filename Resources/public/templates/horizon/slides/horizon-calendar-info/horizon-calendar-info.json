@@ -1,13 +1,14 @@
 {
-  "id": "horizon-calendar",
+  "id": "horizon-calendar-info",
+  "theme": "horizon",
   "type": "slide",
-  "name": "Horizon: Kalender",
+  "name": "Horizon: Kalender med info",
   "icon": "icon.jpg",
   "paths": {
     "live": "live.html",
     "edit": "preview.html",
     "preview": "preview.html",
-    "css": "horizon-calendar.css",
+    "css": "horizon-calendar-info.css",
     "js": "bundles/os2displaydefaulttemplate/templates/js/calendarAllSlide.js"
   },
   "orientation": "landscape",
@@ -34,7 +35,7 @@
   "tools": [
     {
       "name": "Info",
-      "template": "bundles/os2displaydefaulttemplate/templates/horizon/slides/horizon-calendar/tools/info.html"
+      "template": "bundles/os2displaydefaulttemplate/templates/horizon/slides/horizon-calendar-info/tools/info.html"
     },
     {
       "name": "Temagrafik",
@@ -42,7 +43,7 @@
     },
     {
       "name": "Tekster",
-      "template": "bundles/os2displaydefaulttemplate/templates/horizon/slides/horizon-calendar/tools/text.html"
+      "template": "bundles/os2displaydefaulttemplate/templates/horizon/slides/horizon-calendar-info/tools/text.html"
     },
     {
       "name": "Logo",

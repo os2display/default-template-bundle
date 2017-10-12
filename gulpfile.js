@@ -52,13 +52,13 @@ var templates = {
     'slides': [
       'horizon-image-text',
       'horizon-image-text-2x',
-      'horizon-calendar'
+      'horizon-calendar-info',
+      'horizon-calendar-list',
+      'horizon-calendar-single'
     ]
   },
   'calendar': {
     'slides': [
-      'calendar-list',
-      'calendar-single'
     ]
   }
 };

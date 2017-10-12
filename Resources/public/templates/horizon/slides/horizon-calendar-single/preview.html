@@ -1,9 +1,9 @@
-<div ng-style="{'background-color': ikSlide.options.bgcolor }" class="calendar-single">
+<div class="horizon-calendar-single preview" data-ng-style="{'width': theStyle.width, 'height': theStyle.height, 'font-size': theStyle.fontsize, 'background-color': ikSlide.options.bgcolor}">
   <div class="bg-image blur"
-       style="background-image: url('{{ ikSlide.currentEvent.image ? ikSlide.currentEvent.image : ikSlide.currentImage }}');"></div>
-  <div class="container-fluid image" ng-if="ikSlide.currentEvent.image || ikSlide.currentImage">
+       style="background-image: url('{{ ikSlide.currentImage }}');"></div>
+  <div class="container-fluid image" ng-if="ikSlide.currentImage">
     <img
-        ng-src="{{ ikSlide.currentEvent.image ? ikSlide.currentEvent.image : ikSlide.currentImage }}"
+        ng-src="{{ ikSlide.currentImage }}"
         class="img-fluid">
   </div>
   <div class="container-fluid container-background">
@@ -23,11 +23,11 @@
                    points="0 23 90 23 83.571 53 6.429 53"/>
           <text fill="#000" font-family="OpenSans-Extrabold, Open Sans"
                 font-size="25" font-weight="600">
-            <tspan x="45" y="76" text-anchor="middle">{{ ikSlide.currentEvent.start_time * 1000 | date:'d.' }}</tspan>
+            <tspan x="45" y="76" text-anchor="middle">5.</tspan>
           </text>
           <text fill="#000" font-family="OpenSans-Extrabold, Open Sans"
                 font-size="25" font-weight="600">
-            <tspan x="45" y="47" text-anchor="middle">{{ ikSlide.currentEvent.start_time * 1000 | date:'MMM' | uppercase }}</tspan>
+            <tspan x="45" y="47" text-anchor="middle">SEP</tspan>
           </text>
         </g>
       </svg>
@@ -35,17 +35,20 @@
     <div class="row event event-next">
       <div class="col-12">
         <div class="subject">
-          <h1>{{ ikSlide.currentEvent.event_name }}</h1>
+          <h1>Emne fusce vehicula dolor arcu sit amet blandit dolor mollis
+            nec</h1>
         </div>
         <div class="time">
-          <p ng-if="ikSlide.currentEvent.fullDay">Hele dagen</p>
-          <p ng-if="!ikSlide.currentEvent.fullDay">{{ ikSlide.currentEvent.start_time * 1000 | date:'HH:mm' }} - {{ ikSlide.currentEvent.end_time * 1000 | date:'HH:mm' }}</p>
+          <p>10:00 til 14:00</p>
         </div>
         <div class="location">
-          <p>{{ ikSlide.currentEvent.location }}</p>
+          <p>Mødelokale 1</p>
         </div>
         <div class="description">
-          <p>{{ ikSlide.currentEvent.body }}</p>
+          <p>Beskrivelse aptent taciti sociosqu ad litora torquent per
+            conubia nostra, per inceptos himenaeos. Maecenas dapibus, elit
+            in rutrum tristique, risus dui aliquam libero, iaculis pharetra
+            arcu enim et</p>
         </div>
       </div>
     </div>

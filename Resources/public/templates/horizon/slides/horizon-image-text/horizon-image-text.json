@@ -1,5 +1,6 @@
 {
   "id": "horizon-image-text",
+  "theme": "horizon",
   "type": "slide",
   "name": "Horizon: Billede/tekst",
   "icon": "icon.jpg",

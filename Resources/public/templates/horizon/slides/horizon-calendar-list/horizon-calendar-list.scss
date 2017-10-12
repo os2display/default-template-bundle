@@ -9,15 +9,15 @@ $color-grey: rgb(125, 125, 125);
 $space-vertical: .5em;
 $box-shadow: 0 0 16px $color-box-shadow-black;
 
-.horizon-calendar {
+.horizon-calendar-list {
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.5;
   height: 100%;
-  width: 100%;
+  width: 96%;
   text-align: left;
   font-family: $font-open-sans;
-  color: #333;
-  padding: 0;
+  color: black;
+  padding: 1.5em;
   margin: 0;
 
   h1, h2, p {
@@ -76,14 +76,6 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     max-width: 16.66667%;
   }
 
-  .col-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%; }
-
-  .col-8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%; }
-
   .lead {
     font-size: 1em;
     margin-bottom: 0.5em;
@@ -104,14 +96,6 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     z-index: 0;
   }
 
-  .image {
-    height: 72%;
-    width: 100%;
-    background-position: top center;
-    background-size: cover;
-    z-index: 0;
-  }
-
   .img-fluid {
     max-width: 100%;
     height: auto;
@@ -119,8 +103,7 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
 
   .lead {
     font-size: 1.25em;
-    font-weight: 300;
-  }
+    font-weight: 300; }
 
   /* End bootstrap */
 
@@ -137,12 +120,12 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   .event-future .subject h2 {
     font-size: 1em;
     font-weight: bold;
-    line-height: 1.5;
-    height: 4.5em;
+    line-height: 1.1em;
+    height: 1.1em;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 1;
   }
   .event-future .time, .event-future .location {
     width: 50%;
@@ -159,28 +142,29 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
   }
 
   .lead {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 0.5em;
   }
 
   .logo {
-    position: fixed;
-    bottom: 1.5em;
-    right: 1.5em;
-    z-index: 3;
+    height: auto;
+    max-height: 6%;
+    position: absolute;
+    bottom: 2.5%;
+    right: 1%;
+    z-index: 1;
   }
 
   .subject {
-    margin-left: 14em;
-
     h1 {
-      font-size: 2.3em;
+      font-size: 2em;
       font-weight: bold;
-      line-height: 2.3em;
+      line-height: 1em;
       height: 3em;
+
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 1;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
   }
@@ -192,118 +176,20 @@ $box-shadow: 0 0 16px $color-box-shadow-black;
     }
   }
 
-  .location {
-    text-align: right;
-  }
-
   .lead p {
-    font-weight: bold;
+      font-weight: bold;
   }
 
   .description {
     p {
-      line-height: 1.45em;
-      max-height: 2.9em;
+      line-height: 1.4em;
+      max-height: 15em;
       width: 100%;
+
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 10;
       -webkit-box-orient: vertical;
     }
-  }
-
-  .container-fluid.image {
-    padding: 0;
-    position: relative;
-    z-index: 2;
-    margin-top: 10em;
-  }
-
-  .container-background {
-    padding: 4em 2em 2em 2em;
-  }
-
-  .container-fluid {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    .row {
-      margin: 0;
-      > [class^="col-"] {
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .image-text {
-        background-color: #FFF;
-        box-shadow: $box-shadow;
-        z-index: 2;
-        .subject {
-          margin: 2% 5.2% 0 5.2%;
-          h1 {
-            height: auto;
-          }
-        }
-        .line {
-          width: 6em;
-          height: .9%;
-          background-color: #ccc;
-          display: block;
-          margin: 0 0 0 5.2%;
-        }
-        .description {
-          font-size: 1.9em;
-          margin: 2% 5.2% 0 5.2%;
-          height: 2.5em;
-          font-weight: lighter;
-        }
-      }
-      .cal-list {
-        background-color: #FFF;
-        padding: 1.8%;
-        z-index: 1;
-        .subject {
-          margin: 0 0 0 1.5em;
-        }
-      }
-    }
-  }
-
-  .logo {
-    height: auto;
-    max-width: 12%;
-    position: absolute;
-    bottom: .5%;
-    right: .5%;
-    z-index: 2;
-  }
-
-  .date {
-    height: 6em;
-  }
-
-  .arrow {
-    position: absolute;
-    width: 72%;
-    top: 69.5%;
-    left: 0;
-  }
-
-  .row-top {
-    height: 100%;
-  }
-
-  .col-custom-big {
-    flex: 0 0 72%;
-    max-width: 72%;
-  }
-
-  .col-custom-small {
-    flex: 0 0 28%;
-    max-width: 28%;
-    font-size: 1.6em;
-  }
-
-  .calendar-icon {
-    width: 115%;
   }
 }
