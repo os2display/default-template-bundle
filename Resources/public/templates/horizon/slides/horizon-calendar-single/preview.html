@@ -1,10 +1,8 @@
 <div class="horizon-calendar-single preview" data-ng-style="{'width': theStyle.width, 'height': theStyle.height, 'font-size': theStyle.fontsize, 'background-color': ikSlide.options.bgcolor}">
   <div class="bg-image blur"
-       style="background-image: url('{{ ikSlide.currentImage }}');"></div>
-  <div class="container-fluid image" ng-if="ikSlide.currentImage">
-    <img
-        ng-src="{{ ikSlide.currentImage }}"
-        class="img-fluid">
+       style="background-image: url('{{ ikSlide.currentImage }}')"></div>
+  <div class="container-fluid image"
+       style="background-image: url('{{ ikSlide.currentImage }}')">
   </div>
   <div class="container-fluid container-background">
     <div class="date">
@@ -16,18 +14,19 @@
           </linearGradient>
         </defs>
         <g fill="none" fill-rule="evenodd">
-          <path fill="{{ ikSlide.options.bgcolor }}"
-                d="M4,0 L85,0 C86.6568542,-7.66227013e-15 88,1.34314575 88,3 L88,84 L88,84 C88,85.6568542 86.6568542,87 85,87 L4,87 L4,87 C2.34314575,87 1,85.6568542 1,84 L1,3 L1,3 C1,1.34314575 2.34314575,3.04359188e-16 4,0 L4,0 Z M28,11 C29.6568542,11 31,9.88071187 31,8.5 C31,7.11928813 29.6568542,6 28,6 C26.3431458,6 25,7.11928813 25,8.5 C25,9.88071187 26.3431458,11 28,11 Z M64,11 C65.6568542,11 67,9.88071187 67,8.5 C67,7.11928813 65.6568542,6 64,6 C62.3431458,6 61,7.11928813 61,8.5 C61,9.88071187 62.3431458,11 64,11 Z"/>
+          <rect width="90" height="87" x="0" y="0" fill="{{ ikSlide.options.color }}" rx="2" ry="2"/>
+          <circle cx="30" cy="10" r="3" fill="rgba(255,255,255,0.9)"/>
+          <circle cx="60" cy="10" r="3" fill="rgba(255,255,255,0.9)"/>
           <rect width="77" height="63" x="6" y="19" fill="#FFF"/>
           <polygon fill="url(#cal-icon-a)"
                    points="0 23 90 23 83.571 53 6.429 53"/>
           <text fill="#000" font-family="OpenSans-Extrabold, Open Sans"
-                font-size="25" font-weight="600">
-            <tspan x="45" y="76" text-anchor="middle">5.</tspan>
+                font-size="25" font-weight="800">
+            <tspan x="45" y="76" text-anchor="middle">OKT</tspan>
           </text>
           <text fill="#000" font-family="OpenSans-Extrabold, Open Sans"
-                font-size="25" font-weight="600">
-            <tspan x="45" y="47" text-anchor="middle">SEP</tspan>
+                font-size="25" font-weight="800">
+            <tspan x="45" y="47" text-anchor="middle">10.</tspan>
           </text>
         </g>
       </svg>

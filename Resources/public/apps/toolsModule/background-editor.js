@@ -5,7 +5,8 @@ angular.module('toolsModule').directive('backgroundEditor', [
       replace: true,
       scope: {
         slide: '=',
-        close: '&'
+        close: '&',
+        template: '@'
       },
       link: function (scope) {
         scope.step = 'background-picker';
@@ -92,7 +93,9 @@ angular.module('toolsModule').directive('backgroundEditor', [
         });
 
       },
-      templateUrl: '/bundles/os2displaydefaulttemplate/apps/toolsModule/background-editor.html'
+      templateUrl: function(elem, attrs) {
+        return attrs.template ? attrs.template : '/bundles/os2displaydefaulttemplate/apps/toolsModule/background-editor.html';
+      }
     };
   }
 ]);

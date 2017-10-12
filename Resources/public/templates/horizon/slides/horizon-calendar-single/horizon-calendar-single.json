@@ -20,7 +20,8 @@
     "height": "1920"
   },
   "empty_options": {
-    "color": "#007AAF",
+    "color": "#000000",
+    "bgcolor": "#007AAF",
     "fontsize": "16",
     "logopos": {
       "top":"0",
@@ -37,7 +38,8 @@
     },
     {
       "name": "Temagrafik",
-      "id": "background-editor"
+      "id": "background-editor",
+      "template": "bundles/os2displaydefaulttemplate/apps/toolsModule/horizon-background-editor.html"
     },
     {
       "name": "Logo",
