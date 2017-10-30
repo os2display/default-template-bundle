@@ -28,15 +28,13 @@ var banner = [
 
 // @TODO: Discover this structure automatically
 var templates = {
-  'screens': {
-    'default_templates': [
+  'default_templates': {
+    'screens': [
       'five-sections',
       'three-columns',
       'two-columns'
-    ]
-  },
-  'slides': {
-    'default_templates': [
+    ],
+    'slides': [
       'ik-iframe',
       'manual-calendar',
       'only-image',
@@ -49,6 +47,19 @@ var templates = {
       'text-top',
       'slideshow'
     ]
+  },
+  'horizon': {
+    'slides': [
+      'horizon-image-text',
+      'horizon-image-text-2x',
+      'horizon-calendar-info',
+      'horizon-calendar-list',
+      'horizon-calendar-single'
+    ]
+  },
+  'calendar': {
+    'slides': [
+    ]
   }
 };
 
@@ -59,9 +70,9 @@ gulp.task('sass', 'Compile the sass for each templates into minified css files.'
   'use strict';
 
   // Iterates through the screen and slide templates defined in templates variable, and compresses each one.
-  for (var templateType in templates) {
-    for (var folder in templates[templateType]) {
-      var arr = templates[templateType][folder];
+  for (var folder in templates) {
+    for (var templateType in templates[folder]) {
+      var arr = templates[folder][templateType];
 
       arr.forEach(function (element) {
         var path = templatesPath + folder + '/' + templateType + '/' + element + '/';

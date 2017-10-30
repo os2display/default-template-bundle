@@ -5,7 +5,8 @@ angular.module('toolsModule').directive('logoEditor', [
       replace: true,
       scope: {
         slide: '=',
-        close: '&'
+        close: '&',
+        template: '@'
       },
       link: function (scope) {
         scope.logoStep = 'logo-picker';
@@ -128,7 +129,9 @@ angular.module('toolsModule').directive('logoEditor', [
           );
         });
       },
-      templateUrl: '/bundles/os2displaydefaulttemplate/apps/toolsModule/logo-editor.html'
+      templateUrl: function(elem, attrs) {
+        return attrs.template ? attrs.template : '/bundles/os2displaydefaulttemplate/apps/toolsModule/logo-editor.html';
+      }
     };
   }
 ]);
