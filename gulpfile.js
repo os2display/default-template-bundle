@@ -47,19 +47,6 @@ var templates = {
       'text-top',
       'slideshow'
     ]
-  },
-  'horizon': {
-    'slides': [
-      'horizon-image-text',
-      'horizon-image-text-2x',
-      'horizon-calendar-info',
-      'horizon-calendar-list',
-      'horizon-calendar-single'
-    ]
-  },
-  'calendar': {
-    'slides': [
-    ]
   }
 };
 
