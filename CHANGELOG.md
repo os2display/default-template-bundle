@@ -2,6 +2,8 @@
 
 ## In develop
 
+## 1.0.8
+
 * Updated npm packages.
 
 ## 1.0.7
