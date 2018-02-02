@@ -1,5 +1,9 @@
 # os2display/default-template-bundle CHANGELOG
 
+## 1.0.9
+
+* Fixed image paths.
+
 ## 1.0.8
 
 * Updated npm packages.
