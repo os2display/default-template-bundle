@@ -1,6 +1,6 @@
 # os2display/default-template-bundle CHANGELOG
 
-## 1.0.6
+## 1.0.9
 
 * Fixed image paths.
 
