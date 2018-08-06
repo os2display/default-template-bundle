@@ -1,5 +1,9 @@
 # os2display/default-template-bundle CHANGELOG
 
+## develop
+
+* Fixed manual calender filter order.
+
 ## 1.0.10
 
 * Removed os2display requirements.
