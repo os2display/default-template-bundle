@@ -38,9 +38,7 @@ if (!window.slideFunctions['video']) {
 
       // If media is empty go to the next slide.
       if (slide.media.length <= 0) {
-        region.$timeout(function () {
-          region.nextSlide();
-        }, 1000);
+        region.$timeout(region.nextSlide, 1000);
         return;
       }
 
