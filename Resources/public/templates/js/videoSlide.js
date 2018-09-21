@@ -36,6 +36,14 @@ if (!window.slideFunctions['video']) {
 
       var video;
 
+      // If media is empty go to the next slide.
+      if (slide.media.length <= 0) {
+        region.$timeout(function () {
+          region.nextSlide();
+        }, 1000);
+        return;
+      }
+
       /**
        * Helper function to update source for video.
        *
@@ -81,12 +89,6 @@ if (!window.slideFunctions['video']) {
         // Go to the next slide.
         region.nextSlide();
       };
-
-      // If media is empty go to the next slide.
-      if (slide.media.length <= 0) {
-        region.nextSlide();
-        return;
-      }
 
       region.$timeout(function () {
         // Get hold of the video element and update.
