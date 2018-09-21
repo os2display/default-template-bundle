@@ -37,8 +37,13 @@ if (!window.slideFunctions['video']) {
       var video;
 
       // If media is empty go to the next slide.
-      if (slide.media.length <= 0) {
-        region.$timeout(region.nextSlide, 1000);
+      if (slide.media.length <= 0 || !slide.media.hasOwnProperty('0') ||slide.media[0].length <= 0) {
+        region.itkLog.error("No video sources");
+        region.$timeout(
+          function (region) {
+            region.nextSlide();
+          },
+          5000, true, region);
         return;
       }
 
