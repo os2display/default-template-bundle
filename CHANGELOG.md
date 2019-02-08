@@ -1,5 +1,13 @@
 # os2display/default-template-bundle CHANGELOG
 
+## 1.1.1
+
+* Changed video source order to be: webm, ogg, mp4.
+* Removed Offline checks in video slide.
+* Fixed removal of event listeners for video slide.
+* Fixed empty sources checks and removed possibility of infinite loop crash.
+* Fixed manual calender filter order.
+
 ## 1.1.0
 
 * Removed os2display requirements.
