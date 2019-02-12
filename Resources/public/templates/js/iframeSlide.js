@@ -13,6 +13,8 @@ if (!window.slideFunctions['iframe']) {
     setup: function setupIframeSlide(scope) {
       var slide = scope.ikSlide;
 
+      scope.ikSlide.scroll = slide.options.disable_scrollbar ? "no" : "auto";
+
       // Last time the slide was refreshed.
       slide.lastRefresh = 0;
 
