@@ -22,7 +22,8 @@
     "source": "",
     "framewidth": "100%",
     "bgcolor": "#ccc",
-    "disable_update": false
+    "disable_update": false,
+    "disable_scrollbar": false
   },
   "tools": [
     {

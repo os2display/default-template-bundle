@@ -20,5 +20,11 @@
     "jshint-stylish": "^2.2.1",
     "npm-font-open-sans": "^1.1.0",
     "yargs": "^10.1.1"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "devDependencies": {
+    "jshint": "^2.10.1"
   }
 }
