@@ -1,5 +1,9 @@
 # os2display/default-template-bundle CHANGELOG
 
+## 1.1.2
+
+* Merged https://github.com/os2display/default-template-bundle/pull/10.
+
 ## 1.1.1
 
 * Changed video source order to be: webm, ogg, mp4.
