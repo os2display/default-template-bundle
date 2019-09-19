@@ -9,6 +9,11 @@
   text-align: center;
   width: 100%;
 
+  &--wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
   &.is-preview {
     padding-top: 0;
   }
