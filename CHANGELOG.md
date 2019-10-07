@@ -1,6 +1,6 @@
 # os2display/default-template-bundle CHANGELOG
 
-## In develop
+## 1.2.0
 
 * Avoid loading iframe before it is shown. This will create a slight load when the iframe slide is shown.
 * Added text explaining the possible issues with using the iframe template.
