@@ -40,7 +40,7 @@ angular.module('toolsModule').directive('manualCalendarEditor', function(){
       scope.sortEvents = function sortEvents() {
         if (scope.slide.options.eventitems.length > 0) {
           // Sort the events by from date.
-          scope.slide.options.eventitems = $filter('orderBy')(scope.slide.options.eventitems, "from")
+          scope.slide.options.eventitems = $filter('orderBy')(scope.slide.options.eventitems, "from");
         }
       };
 
