@@ -12,8 +12,9 @@ if (!window.slideFunctions['iframe']) {
      */
     setup: function setupIframeSlide(scope) {
       var slide = scope.ikSlide;
+      slide.hide = true;
 
-      scope.ikSlide.scroll = slide.options.disable_scrollbar ? "no" : "auto";
+      slide.scroll = slide.options.disable_scrollbar ? "no" : "auto";
 
       // Last time the slide was refreshed.
       slide.lastRefresh = 0;
@@ -52,6 +53,8 @@ if (!window.slideFunctions['iframe']) {
 
       var duration = slide.duration !== null ? slide.duration : 15;
 
+      slide.hide = false;
+
       // Wait fadeTime before start to account for fade in.
       region.$timeout(function () {
         // Set the progress bar animation.
@@ -60,6 +63,8 @@ if (!window.slideFunctions['iframe']) {
         // Wait for slide duration, then show next slide.
         // + fadeTime to account for fade out.
         region.$timeout(function () {
+          // Remove the iframe from the DOM when not in use to avoid javascript running from iframe.
+          slide.hide = true;
           region.nextSlide();
         }, duration * 1000 + region.fadeTime);
       }, region.fadeTime);

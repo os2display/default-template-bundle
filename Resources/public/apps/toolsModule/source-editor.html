@@ -16,16 +16,33 @@
           <input type="text" data-ng-model="slide.options.source">
         </div>
         <div class="edit-menu--iframe-content">
+          <p>
+            <strong>Bemærk!!</strong> Brug af iFrame-skabelonen kan give problemer i os2display, da en ekstern side bliver
+            vist i iframen. I denne kan der køre alt muligt kode, som os2display ikke har styr på, og noget kan
+            muligvis ikke eksekveres i iframen.
+          </p>
+          <p>
+            Derfor er brug af denne skabelon på eget ansvar.
+          </p>
+          <p>
+            Stien skal være sikker (starte med https://), da indholdet ellers vil blive blokeret af browseren.
+          </p>
+        </div>
+        <div class="edit-menu--iframe-content">
           <div class="edit-menu--iframe-label">Deaktiver automatiske opdateringer af iframe</div>
           <input type="checkbox" data-ng-model="slide.options.disable_update">
         </div>
         <div class="edit-menu--iframe-content">
-          <div class="edit-menu--iframe-label">Vælg iframe bredde (Px eller %)</div>
-          <input type="text" placeholder="300px"  data-ng-model="slide.options.framewidth">
+          <div class="edit-menu--iframe-label">Vælg iframe bredde (px eller %)</div>
+          <input type="text" placeholder="100%" data-ng-model="slide.options.framewidth">
+        </div>
+        <div class="edit-menu--iframe-content">
+          <div class="edit-menu--iframe-label">Vælg iframe højde (px eller %)</div>
+          <input type="text" placeholder="100%" data-ng-model="slide.options.frameheight">
         </div>
         <div class="edit-menu--iframe-content">
           <div class="edit-menu--iframe-label">Deaktivér scrollbar på iframe</div>
-          <input type="checkbox" placeholder="300px"  data-ng-model="slide.options.disable_scrollbar">
+          <input type="checkbox" placeholder="300px" data-ng-model="slide.options.disable_scrollbar">
         </div>
         <div class="edit-menu--iframe-content">
           <div class="edit-menu--iframe-label">Vælg baggrundsfarve</div>
