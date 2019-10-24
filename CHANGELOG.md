@@ -1,5 +1,9 @@
 # os2display/default-template-bundle CHANGELOG
 
+## 2.0.0
+
+* Merged PR: https://github.com/os2display/default-template-bundle/pull/25 to fix black video poster background.
+
 ## 1.2.0
 
 * Avoid loading iframe before it is shown. This will create a slight load when the iframe slide is shown.
