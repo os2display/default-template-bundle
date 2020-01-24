@@ -1,5 +1,5 @@
 <div class="only-video" data-ng-style="{'width': theStyle.width, 'height': theStyle.height}">
-  <video data-ng-if="ikSlide.media.length > 0 && ikSlide.media[0].provider_metadata[0].reference" class="only-video--video-player" controls autoplay="false" id="videoPlayer">
+  <video data-ng-if="ikSlide.media.length > 0 && ikSlide.media[0].provider_metadata[0].reference" class="only-video--video-player" controls id="videoPlayer">
     <source data-ng-src="{{mediaEntry.reference}}" type="video/{{mediaEntry.format}}" data-ng-repeat="mediaEntry in ikSlide.media[0].provider_metadata">
   </video>
 
