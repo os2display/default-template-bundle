@@ -15,11 +15,7 @@ if (!window.slideFunctions['video']) {
 
       if (slide.media_type === 'video' && slide.media.length > 0) {
         // Set current video variable to path to video files.
-        slide.currentVideo = {
-          "mp4": slide.media[0].mp4,
-          "ogg": slide.media[0].ogv,
-          "webm": slide.media[0].webm
-        };
+        slide.currentVideo = slide.media[0];
       }
     },
 
