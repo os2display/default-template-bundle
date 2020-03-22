@@ -1,9 +1,7 @@
 <div class="only-video">
   <video id="videoPlayer-{{ikSlide.uniqueId}}" class="only-video--video-player" poster="/bundles/os2displaydefaulttemplate/assets/images/black.png">
-    <source data-src="{{ikSlide.currentVideo.webm}}" type="video/webm" data-ng-if="ikSlide.currentVideo.webm">
-    <source data-src="{{ikSlide.currentVideo.ogg}}" type="video/ogg" data-ng-if="ikSlide.currentVideo.ogg">
-    <source data-src="{{ikSlide.currentVideo.mp4}}" type="video/mp4" data-ng-if="ikSlide.currentVideo.mp4">
-      Your browser does not support the <code>video</code> element.
+    <source data-src="{{src}}" type="video/{{key}}" data-ng-repeat="(key,src) in ikSlide.currentVideo" />
+    Your browser does not support the <code>video</code> element.
   </video>
 
   <img class="only-video--logo" data-ng-show="ikSlide.currentLogo" data-ng-style="{'top':ikSlide.options.logopos.top, 'bottom':ikSlide.options.logopos.bottom, 'left':ikSlide.options.logopos.left, 'right':ikSlide.options.logopos.right, 'width': ikSlide.options.logosize}" data-ng-src="{{ikSlide.currentLogo}}" />
