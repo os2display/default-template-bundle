@@ -45,6 +45,31 @@ if (!window.slideFunctions['base']) {
     run: function runBaseSlide(slide, region) {
       region.itkLog.info("Running base slide: " + slide.title);
 
+      // Darkmode.
+      if (slide.options.darkmode) {
+        slide.darkmodeEnabled = false;
+
+        var darkmodeFrom = slide.options.darkmode_from;
+        var darkmodeTo = slide.options.darkmode_to;
+
+        var hourNow = (new Date()).getHours();
+
+        // Darkmode starts one day and ends the next.
+        if (darkmodeFrom > darkmodeTo) {
+          if (hourNow > darkmodeFrom) {
+            slide.darkmodeEnabled = true;
+          }
+          else if (hourNow < darkmodeTo) {
+            slide.darkmodeEnabled = true;
+          }
+        }
+        else {
+          if (hourNow >= darkmodeFrom && hourNow < darkmodeTo) {
+            slide.darkmodeEnabled = true;
+          }
+        }
+      }
+
       var duration = slide.duration !== null ? slide.duration : 15;
 
       // Wait fadeTime before start to account for fade in.
