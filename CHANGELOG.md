@@ -1,5 +1,9 @@
 # os2display/default-template-bundle CHANGELOG
 
+## 2.2.0
+
+* Merged PR https://github.com/os2display/default-template-bundle/pull/27 - feature: Darkmode support.
+
 ## 2.1.0
 
 * Merged PR https://github.com/os2display/default-template-bundle/pull/26 - Feature: Configurable video formats
